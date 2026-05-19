@@ -1,5 +1,9 @@
 FROM python:3.9-slim
-WORKIDIR /app
-COPY ..
-RUN pip install -r requirments.txt
-CMD ["python","app.py"]
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install -r requirements.txt
+
+CMD ["python", "app.py"]
